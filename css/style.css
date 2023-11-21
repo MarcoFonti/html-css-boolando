@@ -1,8 +1,8 @@
+/* ! Centralizzazione Globale */
 :root {
     --dimensioni-contenitore: 1080px;
 }
-
-
+ /* ! Reset */
 * {
     margin: 0;
     padding: 0;
@@ -10,14 +10,13 @@
 }
 
 /* ! Utility */
-
 .flex {
     display: flex;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: #ffffff;   
 }
 
 li {
@@ -37,6 +36,17 @@ h1 {
     font-size: 20px;
 }
 
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Spazio superiore al body */
 body {
     padding-top: 100px;
 }
@@ -46,7 +56,7 @@ header {
     background-color: #FF6900;
     top:0;
     width: 100%;
-    min-height: 90px;
+    min-height: 80px;
     position: fixed;
     z-index: 1;
     align-items: center;
@@ -67,27 +77,32 @@ ul {
 
 /* Logo */
 .image-logo {
-    height: 35px;
+    height: 30px;
 }
 
+/* Contenitore Contenuti */
 .box-container{
     justify-content: center;
 }
 
+/* Figlio diretto del box.container e Padre dell box-card */
 .box-items-container {
     flex-wrap: wrap;
     width: var(--dimensioni-contenitore);
 }
 
+/* Genitore di tutti i box-image */
 .box-items-container .box-card {
 	flex-basis: calc(100% / 3);
     padding: 1rem;
 }
 
+/* Box dei contenuti */
 .box-image {
     position: relative;   
 }
 
+/* Cuore */
 .heart-image {
     position: absolute;
     top:10px;
@@ -96,34 +111,54 @@ ul {
     padding: 10px;
 }
 
+/* Genitore degli sconti */
 .box-container-discount{
     position: absolute;
     bottom:30px;
 }
 
-.color-red {
-    background-color: red;
+/* Carta rossa di sconto */
+.paper-red {
+    background-color:#FF0000;
     padding: 5px 10px;
+    color: #ffffff;
 }
 
-.color-green {
-    background-color: green;
+/* Carta verde sostenibilità */
+.paper-green {
+    background-color: #008000;
     padding: 5px 10px;
+    color: #ffffff;
 }
 
+/* Prezzo attuale in sconto */
+.text-discount {
+    color: #FF0015;
+    font-weight: 800;
+}
+
+/* Prezzo prima dello sconto */
+.text-out {
+    text-decoration:line-through;
+}
+
+/* Colore al cuore con hover */
 .heart-image:hover {
-    color: red;
+    color: #ff0000;
 }
 
+/* immagine di base scompare con hover */
 .image-base:hover {
     opacity: 0;
 }
 
+/* Posizione e immagine come cover con hover */
 .box-hover:hover {
     position: relative; 
     background-size: cover;
 }
 
+/* ? Immagini che compaiono solo con hover */
 .relaxed-fit:hover {
     background-image: url(../img/assets/img/1b.webp);
 }
@@ -148,42 +183,21 @@ ul {
     background-image: url(../img/assets/img/6b.webp);
 }
 
-
-
-
-
-
-
-
-.text-discount {
-    color: red;
-    font-weight: 800;
-}
-
-.text-out {
-    text-decoration:line-through;
-}
-
+/* Footer */
 footer {
     background-color: #1A1A1A;
     justify-content: center;
     margin-top: 20px;
 }
 
+/* Figlio del footer */
 .fot-navbar{
     width: var(--dimensioni-contenitore);
     justify-content: space-between;
     padding: 25px;
 }
-h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
 
-h3 {
-    font-size: 15px;
-    margin-bottom: 10px;
-}
+/* Icone footer */
 .x-2 {
     font-size: 25px;
 }
