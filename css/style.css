@@ -77,7 +77,6 @@ ul {
 .box-items-container {
     flex-wrap: wrap;
     width: var(--dimensioni-contenitore);
-    margin: 0 -1rem;
 }
 
 .box-items-container .box-card {
@@ -85,7 +84,7 @@ ul {
     padding: 1rem;
 }
 
-.box-relaxed-fit {
+.box-image {
     position: relative;   
 }
 
@@ -120,11 +119,41 @@ ul {
     opacity: 0;
 }
 
-.box-relaxed-fit:hover {
-    background-image: url(../img/assets/img/1b.webp);
+.box-hover:hover {
     position: relative; 
     background-size: cover;
 }
+
+.relaxed-fit:hover {
+    background-image: url(../img/assets/img/1b.webp);
+}
+
+.roses:hover {
+    background-image: url(../img/assets/img/2b.webp);
+}
+
+.pastel:hover {
+    background-image: url(../img/assets/img/3b.webp);
+}
+
+.tee:hover {
+    background-image: url(../img/assets/img/4b.webp);
+}
+
+.stripe:hover {
+    background-image: url(../img/assets/img/5b.webp);
+}
+
+.sweater:hover {
+    background-image: url(../img/assets/img/6b.webp);
+}
+
+
+
+
+
+
+
 
 .text-discount {
     color: red;
@@ -138,6 +167,7 @@ ul {
 footer {
     background-color: #1A1A1A;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .fot-navbar{
