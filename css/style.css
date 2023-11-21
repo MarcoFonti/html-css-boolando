@@ -1,5 +1,64 @@
+:root {
+    --dimensioni-contenitore: 1080px;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box 
 }
+
+/* ! Utility */
+
+.flex {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.color-white {
+    color: #ffffff;
+}
+
+/* Header Fisso */
+header {
+    background-color: #FF6900;
+    width: 100%;
+    min-height: 90px;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Barra del menu */
+.main-navbar {
+    align-items: center;
+    justify-content: space-between;
+    width: var(--dimensioni-contenitore);
+    border: 1px solid;
+}
+
+/* Link menu */
+ul {
+    gap:10px
+}
+
+/* Logo */
+.image-logo {
+    height: 35px;
+}
+
+
+
