@@ -110,7 +110,7 @@ ul {
 /* Genitore di tutti i box-image */
 .col {
 	flex-basis: calc( 100% / 3 );
-    padding: 10px;
+    padding: 5px;
 }
 
 /* Box dei contenuti */
