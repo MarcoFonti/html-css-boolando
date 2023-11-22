@@ -2,6 +2,7 @@
 :root {
     --dimensioni-contenitore: 1080px;
 }
+
  /* ! Reset */
 * {
     margin: 0;
@@ -44,7 +45,10 @@ h2 {
 h3 {
     font-size: 16px;
     margin-bottom: 10px;
+    padding-right: 10px;
 }
+
+/* ? Inzio */
 
 /* Spazio superiore al body */
 body {
@@ -56,18 +60,22 @@ header {
     background-color: #FF6900;
     top:0;
     width: 100%;
-    min-height: 80px;
     position: fixed;
     z-index: 1;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 1px 3px #666;
 }
 
 /* Barra del menu */
 .main-navbar {
     align-items: center;
-    justify-content: space-between;
     width: var(--dimensioni-contenitore);
+    min-height: 80px;
+}
+
+.main-navbar > * {
+    flex-basis: calc(100% / 3);
 }
 
 /* Link menu */
@@ -78,6 +86,13 @@ ul {
 /* Logo */
 .image-logo {
     height: 30px;
+    margin: 0 auto;
+}
+
+/* Icone Header */
+.icon-my {
+    justify-content: flex-end;
+    gap: 5px;
 }
 
 /* Contenitore Contenuti */
@@ -92,9 +107,8 @@ ul {
 }
 
 /* Genitore di tutti i box-image */
-.box-items-container .box-card {
-	flex-basis: calc(100% / 3);
-    padding: 1rem;
+.col {
+	flex-basis: calc( 100% / 3 );
 }
 
 /* Box dei contenuti */
@@ -148,39 +162,18 @@ ul {
 }
 
 /* immagine di base scompare con hover */
-.image-base:hover {
-    opacity: 0;
+.card-image:hover .image-base{
+    display: none;
 }
 
-/* Posizione e immagine come cover con hover */
-.box-hover:hover {
-    position: relative; 
-    background-size: cover;
+/* Immagine secondaria è trasparente all'inizio */
+.image-trasparent {
+    display: none;
 }
 
-/* ? Immagini che compaiono solo con hover */
-.relaxed-fit:hover {
-    background-image: url(../img/assets/img/1b.webp);
-}
-
-.roses:hover {
-    background-image: url(../img/assets/img/2b.webp);
-}
-
-.pastel:hover {
-    background-image: url(../img/assets/img/3b.webp);
-}
-
-.tee:hover {
-    background-image: url(../img/assets/img/4b.webp);
-}
-
-.stripe:hover {
-    background-image: url(../img/assets/img/5b.webp);
-}
-
-.sweater:hover {
-    background-image: url(../img/assets/img/6b.webp);
+/* L'immagine secondaria appena ci passi sopra cambia */
+.card-image:hover .image-trasparent {
+    display: block;
 }
 
 /* Footer */
@@ -193,8 +186,17 @@ footer {
 /* Figlio del footer */
 .fot-navbar{
     width: var(--dimensioni-contenitore);
-    justify-content: space-between;
     padding: 25px;
+}
+
+/* Divido in due il contenuto della fot-navbar */
+.fot-navbar > * {
+    width: calc(100% / 2);
+}
+
+/* Mando tuto alla fine */
+.icon-social {
+    text-align: end;
 }
 
 /* Icone footer */
